@@ -1,0 +1,8 @@
+README
+setup.py
+pyandexmap/__init__.py
+pyandexmap/geotagging.py
+pyandexmap.egg-info/PKG-INFO
+pyandexmap.egg-info/SOURCES.txt
+pyandexmap.egg-info/dependency_links.txt
+pyandexmap.egg-info/top_level.txt

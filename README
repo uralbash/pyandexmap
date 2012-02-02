@@ -1,0 +1,13 @@
+Installation
+------------
+1 - From pypi:
+
+    pip install pyandexmap
+
+2 - From source:
+
+    python setup.py install
+
+Use
+------------
+Looking source

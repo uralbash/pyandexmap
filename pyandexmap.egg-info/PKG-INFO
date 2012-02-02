@@ -1,0 +1,33 @@
+Metadata-Version: 1.1
+Name: pyandexmap
+Version: 0.0.1
+Summary: Scripts for get data from yandex map API
+Home-page: http://github.com/uralbash/pyandexmap/
+Author: Svintsov Dmitry
+Author-email: spam@19216801.ru
+License: GPL
+Description: Installation
+        ------------
+        1 - From pypi:
+        
+            pip install pyandexmap
+        
+        2 - From source:
+        
+            python setup.py install
+        
+        Use
+        ------------
+        Looking source
+        
+Keywords: yandex map api search ajax geocode geocodding directions        navigation json
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Russian
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: GIS
