@@ -3,7 +3,6 @@ import urllib
 import urlparse
 import urllib2
 import json
-from pprint import pprint
 
 def showNode(node, level):
     if type(node) == dict:
@@ -53,15 +52,22 @@ def getJSON(address, key):
     f = urllib2.urlopen(yandexGeotaggingApi)
     return f.read()
 
-if __name__ == '__main__':
-    address = "Екатеринбург 8 марта 13"
-    key = "ANpUFEkBAAAAf7jmJwMAHGZHrcKNDsbEqEVjEUtCmufxQMwAAAAAAAAAAAAvVrub"+\
-          "VT4btztbduoIgTLAeFILaQ=="
+def listGeoObject(address, key):
     response = getJSON(address, key)
     data = json.loads(response)['response']['GeoObjectCollection']
     if data['metaDataProperty']['GeocoderResponseMetaData']['found']:
         geoObjects = data['featureMember']
-        showNode(geoObjects[0]['GeoObject'], 0);
-        print map(float, geoObjects[0]['GeoObject']['Point']['pos'].split(' '))
+        for obj in geoObjects:
+            #showNode(obj['GeoObject'], 0);
+            yield obj['GeoObject']['metaDataProperty']['GeocoderMetaData']['text']
+            #print map(float, obj['GeoObject']['Point']['pos'].split(' '))
     else:
         print 'Nothing to find'
+
+if __name__ == '__main__':
+    address = "Екатеринбург 8 марта 13"
+    key = "ANpUFEkBAAAAf7jmJwMAHGZHrcKNDsbEqEVjEUtCmufxQMwAAAAAAAAAAAAvVrub"+\
+          "VT4btztbduoIgTLAeFILaQ=="
+    response = listGeoObject(address, key)
+    for addr in response:
+        print addr

@@ -6,7 +6,7 @@ def read(fname):
 
 setup(
     name='pyandexmap',
-    version='0.0.1',
+    version='0.0.2',
     description='Scripts for get data from yandex map API',
     author='Svintsov Dmitry',
     author_email='spam@19216801.ru',
